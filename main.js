@@ -30,3 +30,29 @@ window.addEventListener('scroll', function () {
     header.classList.remove('scroll')
   }
 })
+
+/** Testemonials carousel slider swiper */
+
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  mousewheel: true,
+  keyboard: true
+
+})
+
+/** SCROLLREVEAL mostrar elementos quando der scroll na pagina */
+
+const scrollReveal = ScrollReveal( {
+  origin: 'top',
+  distance: '30px',
+  duration: 700,
+  reset: true
+}) 
+
+scrollReveal.reveal(`#home .text, #home .image, #about .img, #about .text, #services .header, #services .card, #testemonials .header, #testemonials .testemonials, #contact .text, #contact .link, #contact ul li i`, {interval: 100}, )
+
+
+
